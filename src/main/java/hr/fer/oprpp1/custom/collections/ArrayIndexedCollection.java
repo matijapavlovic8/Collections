@@ -110,7 +110,12 @@ public class ArrayIndexedCollection extends Collection {
 	@Override
 	
 	public Object[] toArray() {
-		return this.elements;
+		Object[] arr = new Object[this.size];
+		for(int i = 0; i < this.size; i++) {
+			arr[i] = this.elements[i];
+		}
+		
+		return arr;
 	}
 	
 	@Override
@@ -180,7 +185,7 @@ public class ArrayIndexedCollection extends Collection {
 	
 	public void insert(Object value, int position) {
 		if(position < 0 || position > this.size) throw new IndexOutOfBoundsException("Invalid position!");
-		
+		if(value.equals(null)) throw new NullPointerException("Can't add null.");
 		if(this.size >= this.elements.length) 
 			this.elements = new ArrayIndexedCollection(this, this.elements.length * 2).elements;
 		
@@ -209,6 +214,6 @@ public class ArrayIndexedCollection extends Collection {
 		for(int i = 0; i < this.size; i++) {
 			this.elements[i] = null;
 		}
+		this.size = 0;
 	}
-
 }

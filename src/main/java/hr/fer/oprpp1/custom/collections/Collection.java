@@ -18,7 +18,7 @@ public class Collection {
 	
 	/**
 	 * 
-	 * @return Returns {@code true} if collection contains no objects and {@code false} otherwise
+	 * @return Returns {@code true} if collection contains no objects and {@code false} otherwise.
 	 */
 	
 	public boolean isEmpty() {
