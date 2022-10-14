@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0.031" tests="9" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0.044" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="15"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\MatijaPav\AppData\Local\Temp\surefire13854019867988240469\surefirebooter9590540406984266428.jar C:\Users\MatijaPav\AppData\Local\Temp\surefire13854019867988240469 2022-10-14T11-36-29_953-jvmRun1 surefire5604325698636932731tmp surefire_01628435087118374272tmp"/>
+    <property name="sun.java.command" value="C:\Users\MatijaPav\AppData\Local\Temp\surefire685649147985538080\surefirebooter11934824767758218095.jar C:\Users\MatijaPav\AppData\Local\Temp\surefire685649147985538080 2022-10-14T11-46-14_348-jvmRun1 surefire1182857916390414318tmp surefire_012600483156540671599tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\MatijaPav\eclipse-workspace\hw01-9996005807\target\test-classes;C:\Users\MatijaPav\eclipse-workspace\hw01-9996005807\target\classes;C:\Users\MatijaPav\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\MatijaPav\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\MatijaPav\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\MatijaPav\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\MatijaPav\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\MatijaPav\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\MatijaPav\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\MatijaPav\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\MatijaPav\AppData\Local\Temp\surefire13854019867988240469\surefirebooter9590540406984266428.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\MatijaPav\AppData\Local\Temp\surefire685649147985538080\surefirebooter11934824767758218095.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="15.0.2+7-27"/>
@@ -55,13 +55,13 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="testAddingNullValues" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0"/>
-  <testcase name="testToArray" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0"/>
-  <testcase name="testGet" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0"/>
-  <testcase name="testClear" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0"/>
-  <testcase name="testSize" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0"/>
-  <testcase name="testContains" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0"/>
-  <testcase name="testAddAll" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0"/>
-  <testcase name="testInsert" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0"/>
-  <testcase name="testRemove" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0"/>
+  <testcase name="testAddingNullValues" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0.006"/>
+  <testcase name="testToArray" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0.002"/>
+  <testcase name="testGet" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0.002"/>
+  <testcase name="testClear" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0.002"/>
+  <testcase name="testSize" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0.002"/>
+  <testcase name="testContains" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0.002"/>
+  <testcase name="testAddAll" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0.002"/>
+  <testcase name="testInsert" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0.003"/>
+  <testcase name="testRemove" classname="hr.fer.oprpp1.custom.collections.LinkedListIndexedCollectionTest" time="0.002"/>
 </testsuite>
