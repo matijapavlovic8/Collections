@@ -1,7 +1,6 @@
 package hr.fer.oprpp1.custom.collections;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +11,6 @@ public class ArrayIndexedCollectionTest {
 	private ArrayIndexedCollection multipleElementCollection;
 	private ArrayIndexedCollection fullCollection;
 
-	@BeforeEach
 	void setUp() {
 		emptyCollection = new ArrayIndexedCollection();
 		singleElementCollection = new ArrayIndexedCollection();
@@ -32,29 +30,35 @@ public class ArrayIndexedCollectionTest {
 	}
 	
 	@Test
+	@DisplayName("Test addAll")
+	
 	public void testAddAll() {
+		setUp();
 		ArrayIndexedCollection coll = new ArrayIndexedCollection(multipleElementCollection);
 		assertEquals(coll.get(0), multipleElementCollection.get(0));
 	}
 	
 	@Test
-	@DisplayName("Ensure that initial capacity is at least 1.")
+	@DisplayName("Ensure that null can't be passed as other collection.")
 	
-	public void setInitialCapacityToLessThanOne() {
-		assertThrows(IllegalArgumentException.class, () -> new ArrayIndexedCollection(0));
+	public void testPassNullAsOtherCollection() {
+		setUp();
+		assertThrows(NullPointerException.class, () -> new ArrayIndexedCollection(null));
 	}
 	
 	@Test
-	@DisplayName("Ensure that null can't be passed as other collection.")
+	@DisplayName("Ensure that initial capacity is at least 1.")
 	
-	public void passNullAsOtherCollection() {
-		assertThrows(NullPointerException.class, () -> new ArrayIndexedCollection(null));
+	public void testSetInitialCapacityToLessThanOne() {
+		setUp();
+		assertThrows(IllegalArgumentException.class, () -> new ArrayIndexedCollection(0));
 	}
 	
 	@Test
 	@DisplayName("Ensure that null values can't be added.")
 	
-	public void addNullValueToCollection() {
+	public void testAddNullValueToCollection() {
+		setUp();
 		assertThrows(NullPointerException.class, () -> emptyCollection.add(null));
 	}
 	
@@ -62,6 +66,7 @@ public class ArrayIndexedCollectionTest {
 	@DisplayName("Ensure that size() works correctly.")
 	
 	public void testSize() {
+		setUp();
 		assertEquals(0, emptyCollection.size());
 	}
 	
@@ -69,6 +74,7 @@ public class ArrayIndexedCollectionTest {
 	@DisplayName("Ensure that size() works correctly.")
 	
 	public void testSize2() {
+		setUp();
 		assertEquals(1, new ArrayIndexedCollection(singleElementCollection).size());
 	}
 	
@@ -76,6 +82,7 @@ public class ArrayIndexedCollectionTest {
 	@DisplayName("Ensure that size() works correctly when element is added.")
 	
 	public void testSize3() {
+		setUp();
 		singleElementCollection.add(2);
 		assertEquals(2, singleElementCollection.size());
 	}
@@ -84,6 +91,7 @@ public class ArrayIndexedCollectionTest {
 	@DisplayName("Ensure that size() works correctly when element is removed.")
 	
 	public void testSize4() {
+		setUp();
 		singleElementCollection.remove(0);
 		assertEquals(0, singleElementCollection.size());
 	}
@@ -92,6 +100,7 @@ public class ArrayIndexedCollectionTest {
 	@DisplayName("Ensure that size() works correctly when collection is cleared.")
 	
 	public void testSize5() {
+		setUp();
 		multipleElementCollection.clear();
 		assertEquals(0, multipleElementCollection.size());
 	}
@@ -100,6 +109,7 @@ public class ArrayIndexedCollectionTest {
 	@DisplayName("Ensure that indexOf works.")
 	
 	public void testIndexOf() {
+		setUp();
 		assertEquals(1, multipleElementCollection.indexOf(1));
 	}
 	
@@ -107,6 +117,7 @@ public class ArrayIndexedCollectionTest {
 	@DisplayName("Ensure that indexOf returns -1 when element is not present in the collection.")
 	
 	public void testIndexOf2() {
+		setUp();
 		assertEquals(-1, multipleElementCollection.indexOf("X"));
 	}
 	
@@ -114,6 +125,7 @@ public class ArrayIndexedCollectionTest {
 	@DisplayName("Ensure that toArray() works")
 	
 	public void testToArray() {
+		setUp();
 		assertArrayEquals(new Object[] {0, 1, 2}, multipleElementCollection.toArray());
 	}
 	
@@ -121,6 +133,7 @@ public class ArrayIndexedCollectionTest {
 	@DisplayName("Ensure that contains works.")
 	
 	public void testContains() {
+		setUp();
 		assertEquals(true, singleElementCollection.contains(1));
 		assertEquals(false, singleElementCollection.contains(2));
 	}
@@ -129,6 +142,7 @@ public class ArrayIndexedCollectionTest {
 	@DisplayName("Ensure that remove works.")
 	
 	public void testRemove() {
+		setUp();
 		assertThrows(IndexOutOfBoundsException.class, () -> multipleElementCollection.remove(5));
 		assertThrows(IndexOutOfBoundsException.class, () -> multipleElementCollection.remove(-1));
 		singleElementCollection.remove(0);
@@ -141,6 +155,7 @@ public class ArrayIndexedCollectionTest {
 	@DisplayName("Ensure that insert works.")
 	
 	public void testInsert() {
+		setUp();
 		assertThrows(NullPointerException.class, () -> fullCollection.add(null));
 		multipleElementCollection.insert(3, 1);
 		assertArrayEquals(new Object[] {0, 3, 1, 2}, multipleElementCollection.toArray());
@@ -155,6 +170,7 @@ public class ArrayIndexedCollectionTest {
 	@DisplayName("Ensure that get works.")
 	
 	public void testGet() {
+		setUp();
 		assertThrows(IllegalArgumentException.class, ()-> singleElementCollection.get(2));
 		assertEquals(4, fullCollection.get(4));
 	}
@@ -162,6 +178,7 @@ public class ArrayIndexedCollectionTest {
 	@Test
 	
 	public void testAddingMoreThan16elements() {
+		setUp();
 		for(int i = 0; i < 18; i++) {
 			singleElementCollection.add(i);
 		}
@@ -171,6 +188,7 @@ public class ArrayIndexedCollectionTest {
 	@Test
 	
 	public void testSizeInAddAll() {
+		setUp();
 		ArrayIndexedCollection coll = new ArrayIndexedCollection(multipleElementCollection);
 		assertEquals(3, coll.size());
 	}

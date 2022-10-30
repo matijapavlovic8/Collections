@@ -71,7 +71,7 @@ public class Collection {
 	/**
 	 * Method calls processor.process(.) for each element of this collection. The order in which elements
 	 * will be sent is undefined in this class.
-	 * @param instance of a class {@code Processor} that processes all elements of the collection.
+	 * @param processor instance of a class {@code Processor} that processes all elements of the collection.
 	 */
 	
 	public void forEach(Processor processor) {
@@ -79,7 +79,7 @@ public class Collection {
 	}
 	
 	/**
-	 * 
+	 * Adds all elements of {@code Collection} other to Collection that calls addAll().
 	 * @param other is an instance of a {@code Collection} whose elements will be added to given collection.
 	 */
 	
