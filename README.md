@@ -1,2 +1,2 @@
-# OPRPP1-HW01
+# Collections
 Implementation of some Collections in Java.
