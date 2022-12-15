@@ -1,2 +1,2 @@
 # OPRPP1-HW01
-Lab exercises OPRPP1
+Implementation of some Collections in Java.
